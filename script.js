@@ -1,0 +1,44 @@
+  var div=document.getElementById("cont");
+   
+  document.getElementById("btn").addEventListener('click', ()=>{
+    let input=document.getElementById("input").value;
+    var qv=document.createElement('div');
+    var question=`<div class="question">
+      <div>
+      ${input}
+      </div>
+
+    </div>`;
+    qv.innerHTML=question;
+    div.appendChild(qv);
+  fetch("https://text.pollinations.ai/" + encodeURIComponent(input))
+  .then(response => response.text()) // since it's plain text, not JSON
+  .then(data => {
+    console.log(data);
+    let input=document.getElementById("input");
+    input.value="";
+    var av=document.createElement('div');
+    var answer=` <div class="answer">
+      <div>
+         ${data}
+      </div>
+
+    </div>`;
+    av.innerHTML=answer;
+    div.appendChild(av);
+     requestAnimationFrame(() => {
+    div.scrollTo({
+      top: div.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
+  })
+  .catch(error => {
+    console.error("Error fetching from AI API:", error);
+  });
+
+
+  });
+
+  
+  
