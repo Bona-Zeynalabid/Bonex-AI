@@ -132,7 +132,10 @@ input::placeholder {
         width: 80%;
     }
     .innercommand input{
-        width:82%;
+        width:85%;
+        margin-left:5%;
+        
     }
 
 }
+
