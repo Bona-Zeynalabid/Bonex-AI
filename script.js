@@ -20,7 +20,7 @@
     var av=document.createElement('div');
     var answer=` <div class="answer">
       <div>
-         ${data}
+        <p> ${data}</p>
       </div>
 
     </div>`;
@@ -41,4 +41,5 @@
   });
 
   
+
   
