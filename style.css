@@ -131,4 +131,8 @@ input::placeholder {
     .answer div{
         width: 80%;
     }
+    .innercommand input{
+        width:82%;
+    }
+
 }
