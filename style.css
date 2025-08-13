@@ -84,7 +84,7 @@ input::placeholder {
 .question div{
     width: 50%;
     height: auto;
-    background-color: rgb(43, 39, 39);
+    background-color: black;
     margin-left: 50%;
     border-radius: 20px 20px 0px 20px;
     padding: 30px;
@@ -138,4 +138,5 @@ input::placeholder {
     }
 
 }
+
 
