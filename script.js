@@ -11,11 +11,10 @@
     </div>`;
     qv.innerHTML=question;
     div.appendChild(qv);
-    var input1=input;
-     let input=document.getElementById("input");
-    input.value="";
-  fetch("https://text.pollinations.ai/" + encodeURIComponent(input1))
-  .then(response => response.text()) // since it's plain text, not JSON
+     let input1=document.getElementById("input");
+    input1.value="";
+  fetch("https://text.pollinations.ai/" + encodeURIComponent(input))
+  .then(response => response.text()) 
   .then(data => {
     console.log(data);
    
@@ -45,4 +44,5 @@
   
 
   
+
 
